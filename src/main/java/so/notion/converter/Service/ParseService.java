@@ -1,5 +1,6 @@
 package so.notion.converter.Service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 import so.notion.converter.Entity.Order;
@@ -26,7 +27,7 @@ public class ParseService implements Runnable {
         this.filesRepo = filesRepo;
     }
 
-    //@Autowired
+    @Autowired
     public void setRepositoryFactory(RepositoryFactory repositoryFactory) {
         this.repositoryFactory = repositoryFactory;
     }
